@@ -158,7 +158,8 @@ URI=/tile/ \n\
 TILEDIR=/var/cache/renderd/tiles \n\
 XML=/home/renderer/src/openstreetmap-carto/mapnik.xml \n\
 HOST=localhost \n\
-TILESIZE=256 \n\
+TILESIZE=512 \n\
+SCALE=2.0 \n\
 MAXZOOM=20' >> /etc/renderd.conf \
  && sed -i 's,/usr/share/fonts/truetype,/usr/share/fonts,g' /etc/renderd.conf
 
