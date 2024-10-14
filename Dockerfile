@@ -17,7 +17,7 @@ RUN apt-get update \
 
 FROM compiler-common AS compiler-stylesheet
 RUN cd ~ \
-&& git clone --single-branch --branch v5.4.0 https://github.com/gravitystorm/openstreetmap-carto.git --depth 1 \
+&& git clone --single-branch --branch v5.8.0 https://github.com/gravitystorm/openstreetmap-carto.git --depth 1 \
 && cd openstreetmap-carto \
 && sed -i 's/, "unifont Medium", "Unifont Upper Medium"//g' style/fonts.mss \
 && sed -i 's/"Noto Sans Tibetan Regular",//g' style/fonts.mss \
@@ -115,7 +115,7 @@ RUN ln -sf /dev/stdout /var/log/apache2/access.log \
 # leaflet
 COPY leaflet-demo.html /var/www/html/index.html
 RUN cd /var/www/html/ \
-&& wget https://github.com/Leaflet/Leaflet/releases/download/v1.8.0/leaflet.zip \
+&& wget https://github.com/Leaflet/Leaflet/releases/download/v1.9.4/leaflet.zip \
 && unzip leaflet.zip \
 && rm leaflet.zip
 
